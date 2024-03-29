@@ -25,8 +25,7 @@ namespace DesafioFundamentos.Models
 
             // implementado = input da placa pelo usuário sendo armazenada na string {placa}
             // e remoção do veículo do estacionamento.
-            string placa = "";
-            placa = Console.ReadLine();
+            string placa = Console.ReadLine();
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
@@ -35,11 +34,9 @@ namespace DesafioFundamentos.Models
 
                 // implementado = input de horas que permanenceu no estacionamento,
                 // e cálculo do valor total (preço de entrada + preço por hora)
-                int horas = 0;
-                decimal valorTotal = 0;
                 Console.WriteLine("Quantas horas o veículo ficou estacionado?");
-                horas = Convert.ToInt32(Console.ReadLine());
-                valorTotal = precoInicial + (precoPorHora * horas);
+                int horas = Convert.ToInt32(Console.ReadLine());
+                decimal valorTotal = precoInicial + (precoPorHora * horas);
 
                 // implementado = remove o veículo do sistema do estacionamento baseado no valor da string {placa}
                 veiculos.Remove(placa);
